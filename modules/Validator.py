@@ -6,17 +6,20 @@ from termcolor import colored
 class Validator:
 
   def __init__(self,command):
-    self.command = command # accepts a command object as an argument (see ArgParser.py for details on command objects)
+    # accepts a command object as an argument (see ArgParser.py for details on command objects)
+    self.command = command 
   
   def validArguments(self):
     #Validate Arguments Against the arguments.json file
     ArgSchemaFile = "modules/{0}/arguments.json".format(self.command.name)
     with open(ArgSchemaFile, 'r') as fh:
       data = json.load(fh)
-    if len(self.command.arguments) > data['number_of_possible_arguments']: #checking if more arguments than are accepted have been provided
+    #checking if more arguments than are accepted have been provided
+    if len(self.command.arguments) > data['number_of_possible_arguments']:
       print colored("[!!] To many arguments provided", "red")
       return False
-    elif len(self.command.arguments) < data['number_of_required_arguments']: #checking if the arguments passed contain the minimum required
+    #checking if the arguments passed contain the minimum required
+    elif len(self.command.arguments) < data['number_of_required_arguments']: 
       print colored("[!!] Missing required arguments", "red")
       return False
     else:
@@ -26,10 +29,12 @@ class Validator:
     OptSchemaFile = "modules/{0}/options.json".format(self.command.name)
     with open(OptSchemaFile, 'r') as fh:
       data = json.load(fh)    
-    if len(self.command.options) > data['number_of_possible_options']: #checking if the options passed exceed maximum possible
+    #checking if the options passed exceed maximum possible
+    if len(self.command.options) > data['number_of_possible_options']: 
       print colored("[!!] To many options provided", "red")
       return False
-    elif len(self.command.options) < data['number_of_required_options']: #checking if the options passed do not include required options
+    #checking if the options passed do not include required options
+    elif len(self.command.options) < data['number_of_required_options']: 
       print colored("[!!] Missing required options", "red")
       return False
     else:
