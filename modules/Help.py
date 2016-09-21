@@ -26,7 +26,4 @@ class Helper:
      print '\t"{0}"        {1}'.format(option['name'].encode('utf8'), option['description'].encode('utf8'))
     print "\n"
 
-class command:
-  def __init__(self):
-    self.name = "HelloWorld"
 
