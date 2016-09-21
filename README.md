@@ -13,3 +13,10 @@ Cheli is a simple framework that forces internal tools to be standardized in str
 2) *Modularity* -- modularity is baked into cheli's architecture, and enforced within commands themselves. This creates an easily extendable system that can be maintained and modified iteratively. 
 
 3) *Explicit* -- cheli requires exactly what commands can and cannot do to be defined via the arguments.json, options.json, and command.json file contained within each commands directory. By forcing this to be defined explicitly, and automatically generating help messages based on these definitions, cheli ensures that documentation is kept up to date. It also requires the developer of a given command to be explicit from a development perspective, as they will need to be able to define the commands functions via the schemas for the aforementioned files. 
+
+
+#To-do
+* Add schema validation on the json files
+* generally speaking improve exception handling
+* improve portability
+* add support for "shared" library folder
