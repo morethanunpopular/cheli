@@ -1,0 +1,4 @@
+{
+  "description": "Prints HelloWorld and other messages of greeting",
+  "example": "cheli HelloWorld <string to be greeted> --reverse"
+}
