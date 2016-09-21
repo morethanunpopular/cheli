@@ -3,8 +3,8 @@ import sys
 from modules import ArgParser
 from modules import Executrix 
 from modules import Validator
-from pprint import pprint
-
+from modules import Help
+#from modules import Help
 def main():
   #process CLI Args
   Args = sys.argv
@@ -14,6 +14,10 @@ def main():
   except:
     print "Invalid Arguments or Command provided"
     sys.exit()
+  if "help" in CommandData.arguments:
+    h = Help.Helper(CommandData)
+    h.PrintHelpMessage()
+    sys.exit()  
   #validate command against provided scheme
   validator = Validator.Validator(CommandData)
   if not validator.validArguments():
