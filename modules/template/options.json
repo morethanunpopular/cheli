@@ -1,6 +1,6 @@
 {
-  "number_of_possible_options": 1,
-  "available_options": [{"name": "--reverse","description": "Will display the message in revese", "required": 0}],
+  "number_of_possible_options": 0,
+  "available_options": [{}],
   "number_of_required_options": 0  
 
 }
