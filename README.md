@@ -4,7 +4,7 @@ Cheli is a simple framework for developing CLI toolkits in python.
 
 #Why Use Cheli?
 
-Freqeuntly, internal tools used by teams of Systems Engineers, Software Developers, and/or DevOps Professionals are not developed or maintained with the same rigor and attention to detail as customer facing systems. This creates organizational issues, as a diverse toolset will develop with different styles, structures, and often languages and frameworks being utilized. 
+Frequently, internal tools used by teams of Systems Engineers, Software Developers, and/or DevOps Professionals are not developed or maintained with the same rigor and attention to detail as customer facing systems. This creates organizational issues, as a diverse toolset will develop with different styles, structures, and often languages and frameworks being utilized. 
 
 Cheli is a simple framework that forces internal tools to be standardized in structure, language, and eforces certain documentation standards for commands. Why, you might be asking, would one want to do all of the above? Please consider the following advantages of cheli:
 
