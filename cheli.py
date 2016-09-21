@@ -4,7 +4,7 @@ from modules import ArgParser
 from modules import Executrix 
 from modules import Validator
 from modules import Help
-#from modules import Help
+
 def main():
   #process CLI Args
   Args = sys.argv
