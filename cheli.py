@@ -6,6 +6,7 @@ from modules import Validator
 from modules import Help
 
 def main():
+
   #process CLI Args
   Args = sys.argv
   Args.pop(0)
@@ -17,7 +18,8 @@ def main():
   if "help" in CommandData.arguments:
     h = Help.Helper(CommandData)
     h.PrintHelpMessage()
-    sys.exit()  
+    sys.exit() 
+
   #validate command against provided scheme
   validator = Validator.Validator(CommandData)
   if not validator.validArguments():
